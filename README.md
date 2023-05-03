@@ -1,4 +1,4 @@
-# [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=F7C5B1&background=89D1FF00&repeat=false&width=550&lines=ResNet+Implementation+with+TensorFlow+Keras)]
+# ![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=F7C5B1&background=89D1FF00&repeat=false&width=550&lines=ResNet+Implementation+with+TensorFlow+Keras)
 
 This repository contains an implementation of the ResNet (Residual Network) architecture using TensorFlow Keras. ResNet is a deep convolutional neural network architecture designed for image classification tasks. It is known for its ability to mitigate the vanishing gradient problem by introducing skip connections, which allow the network to learn identity functions and improve gradient flow.
 
