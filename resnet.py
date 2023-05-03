@@ -1,11 +1,9 @@
 import tensorflow as tf
 from tensorflow.keras import layers, models
-from tensorflow.keras.datasets import cifar10
-from tensorflow.keras.utils import to_categorical
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.callbacks import LearningRateScheduler
 import tensorflow_datasets as tfds
 from tensorflow.keras.utils import plot_model
+
 # ResNet blokini qurish
 def resnet_block(inputs, filters, stride):
     x = layers.Conv2D(filters, 3, strides=stride, padding='same')(inputs)
