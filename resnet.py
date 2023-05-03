@@ -6,7 +6,7 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.callbacks import LearningRateScheduler
 import tensorflow_datasets as tfds
 from tensorflow.keras.utils import plot_model
-# Define ResNet building blocks
+# ResNet blokini qurish
 def resnet_block(inputs, filters, stride):
     x = layers.Conv2D(filters, 3, strides=stride, padding='same')(inputs)
     x = layers.BatchNormalization()(x)
@@ -23,7 +23,7 @@ def resnet_block(inputs, filters, stride):
     x = layers.Activation('relu')(x)
     return x
 
-# Define ResNet architecture
+# Arxitektura
 def resnet(input_shape, num_classes):
     inputs = layers.Input(shape=input_shape)
     x = layers.Conv2D(64, 7, strides=2, padding='same')(inputs)
@@ -42,13 +42,13 @@ def resnet(input_shape, num_classes):
     model = models.Model(inputs=inputs, outputs=x)
     return model
 
-# Create and compile the ResNet model
+# model yaratish
 input_shape = (32, 32, 3)
 num_classes = 10
 model = resnet(input_shape, num_classes)
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-# Learning rate scheduler
+# learning rate ni epoch ga to'g'irlash
 def lr_schedule(epoch):
     lr = 1e-3
     if epoch > 180:
@@ -63,7 +63,7 @@ def lr_schedule(epoch):
 
 lr_scheduler = LearningRateScheduler(lr_schedule)
 
-# Train the model
+# Train 
 
 
 input_shape = (32, 32, 3)
@@ -79,7 +79,7 @@ def preprocess_data(example):
 dataset = tfds.load("stanford_online_products", split = "train")
 
 ds_test = tfds.load("stanford_online_products", split = "test")
-# Preprocess the data
+# datasetni tozalash
 
 
 dataset = dataset.map(preprocess_data)
